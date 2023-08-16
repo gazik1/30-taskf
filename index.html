@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 30</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <p>Задание 1</p>
+    <drop-down></drop-down>
+    <hr>
+    <p>Задание 2</p>
+    <tool-tip></tool-tip>
+
+    <hr>
+    <p>Задание 3</p>
+    <text-area></text-area>
+   
+    <hr>
+    <p>Задание 4</p>
+    <app-search></app-search>
+    
+
+                <style>
+
+                    #box-search{
+                        position: relative;
+                        padding-bottom: 31px ;
+                    }
+                    #search{
+                        font-size: 2rem;
+                        padding: 5px 10px;
+                        margin: 0;
+                        border: 1px solid ;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+                  
+                    #helpBox{
+                        display: grid;
+                        width: 100%;
+                        border: 1px solid ;
+                        border-color:rgba(0, 0, 0, 0) ;
+                        transition: border-color 1s;
+                       
+                        position: absolute;
+
+                        transform-origin: top left;
+
+                        pointer-events:unset;
+                        
+                     
+                    }
+                    
+                    .helpElement{
+                        margin-top: -37.5px;
+                        font-size: 2rem;
+                        width: 100%;
+                        opacity: 0;
+                      
+                        pointer-events: none;
+                    }
+                    .helpElement[state="active"]{
+                        transition: opacity .5s, margin-top 0.5s;
+                        transition-delay:0.5s ,0s;
+                    }
+                    .helpElement[state="noActive"]{
+                        transition: opacity .5s, margin-top 0.5s;
+                        transition-delay:0s ,0.5s;
+                    }
+                    .helpElement:hover{
+                        background-color: aliceblue;
+
+                    }
+
+                </style>
+<!-- 
+<div id="box-search">
+<input  id="search" type="search">
+<div id="help">
+    <p>lsldmld</p>
+    <p>jsbdnjs</p>
+    <p>lsldmld</p>
+    <p>jsbdnjs</p>
+
+</div>
+</div> -->
+
+
+                <script></script>
+
+
+
+
+
+
+
+    <script src="index.js" type="module">
+
+    </script>
+</body>
+
+</html>
