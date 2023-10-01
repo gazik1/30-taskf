@@ -48,3 +48,54 @@ textarea {
   width: 100px;
   background-color: rgb(27, 107, 177);
 }
+
+
+#box-search{
+    position: relative;
+    padding-bottom: 31px ;
+}
+#search{
+    font-size: 2rem;
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid ;
+    border-radius: 5px;
+    outline: none;
+}
+
+#helpBox{
+    display: grid;
+    width: 100%;
+    border: 1px solid ;
+    border-color:rgba(0, 0, 0, 0) ;
+    transition: border-color 1s;
+   
+    position: absolute;
+
+    transform-origin: top left;
+
+    pointer-events:unset;
+    
+ 
+}
+
+.helpElement{
+    margin-top: -37.5px;
+    font-size: 2rem;
+    width: 100%;
+    opacity: 0;
+  
+    pointer-events: none;
+}
+.helpElement[state="active"]{
+    transition: opacity .5s, margin-top 0.5s;
+    transition-delay:0.5s ,0s;
+}
+.helpElement[state="noActive"]{
+    transition: opacity .5s, margin-top 0.5s;
+    transition-delay:0s ,0.5s;
+}
+.helpElement:hover{
+    background-color: aliceblue;
+
+}
