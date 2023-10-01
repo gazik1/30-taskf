@@ -45,10 +45,10 @@ export class Search extends HTMLElement {
   }
 
   helps(string){
-    
+    let search = document.getElementById("search");
     let help = document.getElementById("helpBox");
     help.style.pointerEvents="none"
-    let  reg= new RegExp(string)
+    let  reg= new RegExp(string);
     
     let  parag=document.getElementsByClassName("helpElement")
     
@@ -56,7 +56,9 @@ export class Search extends HTMLElement {
     let boolen=false
     this.arr
     .forEach((v,i)=>{
-      
+      parag[i].addEventListener("click",()=>{
+        search.value=parag[i].textContent
+      })
       if(reg.test(v)&&string.length){
         parag[i].setAttribute("state","active")
 

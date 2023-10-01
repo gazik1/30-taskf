@@ -8,25 +8,17 @@ export class Tooltip extends HTMLElement {
     </div>`;
 
     document.addEventListener("mousemove", function(event) {
-      
-      if(event.target.id=="tooltip"){
-        let idElement=document.getElementById("tooltip")
+      if (event.target.id == "tooltip") {
+        let idElement = document.getElementById("tooltip");
         idElement.innerHTML = `<div id='tooltip'>Наведи на меня))
     <span class="tooltiptext">Tooltip</span>
-  </div>`
+  </div>`;
+      } else {
+        let idElement = document.getElementById("tooltip");
 
-} else{
-    console.log(event.target.id,1);
-    let idElement=document.getElementById("tooltip")
-
-    idElement.innerHTML = `<div id='tooltip'>Наведи на меня))
+        idElement.innerHTML = `<div id='tooltip'>Наведи на меня))
     </div>`;
-  }
-
-
-
+      }
     });
-
-    
   }
 }
